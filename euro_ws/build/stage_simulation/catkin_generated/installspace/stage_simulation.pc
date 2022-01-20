@@ -1,0 +1,8 @@
+prefix=/root/euro_ws/install
+
+Name: stage_simulation
+Description: Description of stage_simulation
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

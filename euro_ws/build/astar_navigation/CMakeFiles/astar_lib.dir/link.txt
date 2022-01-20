@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libastar_lib.so -o /root/euro_ws/devel/lib/libastar_lib.so CMakeFiles/astar_lib.dir/src/astar_fcn.cpp.o 

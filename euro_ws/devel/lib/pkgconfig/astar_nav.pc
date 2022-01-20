@@ -1,0 +1,8 @@
+prefix=/root/euro_ws/devel
+
+Name: astar_nav
+Description: Description of astar_nav
+Version: 0.0.0
+Cflags: -I/root/euro_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs roscpp rospy std_msgs message_runtime

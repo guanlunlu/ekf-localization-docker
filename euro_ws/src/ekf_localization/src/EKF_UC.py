@@ -34,7 +34,12 @@ class localization:
                                  [0, 0.1, 0],
                                  [0, 0, 0.1])
 
-        self.measurement_list = []
+        self.observed_features = []
+        self.landmark1 = state_vector(1, -0.092, 0)
+        self.landmark2 = state_vector(0.055, 3.1, 0)
+        self.landmark3 = state_vector(1.953, 3.1, 0)
+        self.landmark_list = [self.landmark1, self.landmark2, self.landmark3]
+
 
     def motionCallback(self, data):
         Vx_t = data.linear.x
@@ -48,7 +53,7 @@ class localization:
         obstacleList = []
         for i in data.circles:
             obstacleList.append(state_vector(i.center.x, i.center.y, 0))
-        self.measurement_list = obstacleList
+        self.observed_features = obstacleList
 
     def state_prediction(self, state_past, cov_past, U_t):
         d_x = self.d_t * U_t.x
@@ -76,17 +81,52 @@ class localization:
                             [0, 0, var_theta])
         
         # Mean estimation
-        x_est = state_past.x + d_x * math.sin(theta_) - d_y * math.cos(theta_)
-        y_est = state_past.y + d_x * math.sin(theta_) + d_y * math.cos(theta_)
-        theta_est = state_past.theta + d_theta
-        state_est = state_vector(x_est, y_est, theta_est)
+        x_pre = state_past.x + d_x * math.sin(theta_) - d_y * math.cos(theta_)
+        y_pre = state_past.y + d_x * math.sin(theta_) + d_y * math.cos(theta_)
+        theta_pre = state_past.theta + d_theta
+        state_pre = state_vector(x_pre, y_pre, theta_pre)
 
-        # Covariance estimation
-        cov_est = Gt * cov_past * Gt.transpose() + Wt * cov_motion * Wt.transpose()
+        # Covariance estimationee
+        cov_pre = Gt * cov_past * Gt.transpose() + Wt * cov_motion * Wt.transpose()
+        self.measurement_update(state_pre, cov_pre, self.observed_features)
 
-    def state_measurement_update(self, state_est, cov_est, measurementList):
-        
-        
+    def state_measurement_update(self, state_pre, cov_pre, measurementList):
+        for obs in self.observed_features:
+            r_sense = self.distance(obs, state_vector(0,0,0))
+            phi_sense = math.atan2(obs.y, obs.x)
+            z = np.mat([[r_sense], [phi_sense], [0]])
+
+            for lm in self.landmark_list:
+                q_sqrt = self.distance(lm, state_pre)
+                q = q_sqrt * q_sqrt
+                phi = self.theta_convert(math.atan2(lm.y - state_pre.y, lm.x - state_pre.x) - state_pre.theta)
+                z_hat = np.mat([[q_sqrt], [phi_sense], [0]])
+
+                 
+
+    def distance(self, p1, p2):
+        d_x = p1.x - p2.x
+        d_y = p1.y - p2.y
+        return math.sqrt(d_x * d_x + d_y * d_y)
+    
+    def theta_convert(self, input):
+        # convert rad domain to [-pi, pi]
+        if input >=0:
+            input = math.fmod(input, 2*pi)
+            if input > pi:
+                input -= 2*pi
+                output = input
+            else:
+                output = input
+        else:
+            input *= -1
+            input = math.fmod(input, 2*pi)
+            if input > pi:
+                input -= 2*pi
+                output = input*-1
+            else:
+                output = input*-1
+        return output
 
 if __name__ == 'main':
     loc = localization()

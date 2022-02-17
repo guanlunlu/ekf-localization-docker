@@ -55,6 +55,7 @@ CMAKE_BINARY_DIR = /root/euro_ws/build
 # The main recursive "all" target.
 all: gtest/all
 all: astar_navigation/all
+all: ekf_localization/all
 all: robot_navigation/all
 all: stage_simulation/all
 all: obstacle_detector/all
@@ -64,6 +65,7 @@ all: obstacle_detector/all
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
 preinstall: astar_navigation/preinstall
+preinstall: ekf_localization/preinstall
 preinstall: robot_navigation/preinstall
 preinstall: stage_simulation/preinstall
 preinstall: obstacle_detector/preinstall
@@ -78,6 +80,7 @@ clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: astar_navigation/clean
+clean: ekf_localization/clean
 clean: robot_navigation/clean
 clean: stage_simulation/clean
 clean: obstacle_detector/clean
@@ -146,6 +149,24 @@ astar_navigation/clean: astar_navigation/CMakeFiles/nav_msgs_generate_messages_e
 astar_navigation/clean: astar_navigation/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/clean
 
 .PHONY : astar_navigation/clean
+
+#=============================================================================
+# Directory level rules for directory ekf_localization
+
+# Recursive "all" directory target.
+ekf_localization/all:
+
+.PHONY : ekf_localization/all
+
+# Recursive "preinstall" directory target.
+ekf_localization/preinstall:
+
+.PHONY : ekf_localization/preinstall
+
+# Recursive "clean" directory target.
+ekf_localization/clean:
+
+.PHONY : ekf_localization/clean
 
 #=============================================================================
 # Directory level rules for directory gtest

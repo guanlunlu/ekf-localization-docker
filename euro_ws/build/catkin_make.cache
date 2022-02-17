@@ -1,2 +1,2 @@
-astar_navigation:obstacle_detector:robot_navigation:stage_simulation
+astar_navigation:ekf_localization:obstacle_detector:robot_navigation:stage_simulation
 -DCATKIN_DEVEL_PREFIX=/root/euro_ws/devel -DCMAKE_INSTALL_PREFIX=/root/euro_ws/install -G Unix Makefiles

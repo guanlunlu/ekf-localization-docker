@@ -132,6 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/root/euro_ws/build/gtest/cmake_install.cmake")
   include("/root/euro_ws/build/astar_navigation/cmake_install.cmake")
+  include("/root/euro_ws/build/ekf_localization/cmake_install.cmake")
   include("/root/euro_ws/build/robot_navigation/cmake_install.cmake")
   include("/root/euro_ws/build/stage_simulation/cmake_install.cmake")
   include("/root/euro_ws/build/obstacle_detector/cmake_install.cmake")

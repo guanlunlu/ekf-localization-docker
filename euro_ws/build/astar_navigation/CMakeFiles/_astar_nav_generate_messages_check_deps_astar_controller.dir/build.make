@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /root/euro_ws/build
 include astar_navigation/CMakeFiles/_astar_nav_generate_messages_check_deps_astar_controller.dir/progress.make
 
 astar_navigation/CMakeFiles/_astar_nav_generate_messages_check_deps_astar_controller:
-	cd /root/euro_ws/build/astar_navigation && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py astar_nav /root/euro_ws/src/astar_navigation/srv/astar_controller.srv geometry_msgs/Pose:geometry_msgs/PoseStamped:geometry_msgs/Quaternion:std_msgs/Header:nav_msgs/Path:geometry_msgs/Point:geometry_msgs/Pose2D
+	cd /root/euro_ws/build/astar_navigation && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py astar_nav /root/euro_ws/src/astar_navigation/srv/astar_controller.srv nav_msgs/Path:geometry_msgs/Pose2D:std_msgs/Header:geometry_msgs/Point:geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/PoseStamped
 
 _astar_nav_generate_messages_check_deps_astar_controller: astar_navigation/CMakeFiles/_astar_nav_generate_messages_check_deps_astar_controller
 _astar_nav_generate_messages_check_deps_astar_controller: astar_navigation/CMakeFiles/_astar_nav_generate_messages_check_deps_astar_controller.dir/build.make

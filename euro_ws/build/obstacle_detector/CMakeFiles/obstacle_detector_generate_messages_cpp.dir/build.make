@@ -60,8 +60,8 @@ obstacle_detector/CMakeFiles/obstacle_detector_generate_messages_cpp: /root/euro
 
 /root/euro_ws/devel/include/obstacle_detector/CircleObstacle.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /root/euro_ws/devel/include/obstacle_detector/CircleObstacle.h: /root/euro_ws/src/obstacle_detector/msg/CircleObstacle.msg
-/root/euro_ws/devel/include/obstacle_detector/CircleObstacle.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
 /root/euro_ws/devel/include/obstacle_detector/CircleObstacle.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/root/euro_ws/devel/include/obstacle_detector/CircleObstacle.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
 /root/euro_ws/devel/include/obstacle_detector/CircleObstacle.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/euro_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from obstacle_detector/CircleObstacle.msg"
 	cd /root/euro_ws/src/obstacle_detector && /root/euro_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /root/euro_ws/src/obstacle_detector/msg/CircleObstacle.msg -Iobstacle_detector:/root/euro_ws/src/obstacle_detector/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p obstacle_detector -o /root/euro_ws/devel/include/obstacle_detector -e /opt/ros/noetic/share/gencpp/cmake/..
@@ -75,11 +75,11 @@ obstacle_detector/CMakeFiles/obstacle_detector_generate_messages_cpp: /root/euro
 
 /root/euro_ws/devel/include/obstacle_detector/Obstacles.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /root/euro_ws/devel/include/obstacle_detector/Obstacles.h: /root/euro_ws/src/obstacle_detector/msg/Obstacles.msg
+/root/euro_ws/devel/include/obstacle_detector/Obstacles.h: /root/euro_ws/src/obstacle_detector/msg/SegmentObstacle.msg
+/root/euro_ws/devel/include/obstacle_detector/Obstacles.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /root/euro_ws/devel/include/obstacle_detector/Obstacles.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /root/euro_ws/devel/include/obstacle_detector/Obstacles.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
 /root/euro_ws/devel/include/obstacle_detector/Obstacles.h: /root/euro_ws/src/obstacle_detector/msg/CircleObstacle.msg
-/root/euro_ws/devel/include/obstacle_detector/Obstacles.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/root/euro_ws/devel/include/obstacle_detector/Obstacles.h: /root/euro_ws/src/obstacle_detector/msg/SegmentObstacle.msg
 /root/euro_ws/devel/include/obstacle_detector/Obstacles.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/euro_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from obstacle_detector/Obstacles.msg"
 	cd /root/euro_ws/src/obstacle_detector && /root/euro_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /root/euro_ws/src/obstacle_detector/msg/Obstacles.msg -Iobstacle_detector:/root/euro_ws/src/obstacle_detector/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p obstacle_detector -o /root/euro_ws/devel/include/obstacle_detector -e /opt/ros/noetic/share/gencpp/cmake/..

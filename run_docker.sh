@@ -33,7 +33,7 @@ docker run -it \
     -v "/dev:/dev" \
     --workdir "/root/euro_ws" \
     --user "root:root" \
-    --name ros_noetic \
+    --name ros_localization \
     --network host \
     --rm \
     --privileged \

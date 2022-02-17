@@ -58,13 +58,13 @@ astar_navigation/CMakeFiles/astar_nav_generate_messages_cpp: /root/euro_ws/devel
 
 /root/euro_ws/devel/include/astar_nav/astar_controller.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /root/euro_ws/devel/include/astar_nav/astar_controller.h: /root/euro_ws/src/astar_navigation/srv/astar_controller.srv
-/root/euro_ws/devel/include/astar_nav/astar_controller.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/root/euro_ws/devel/include/astar_nav/astar_controller.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
-/root/euro_ws/devel/include/astar_nav/astar_controller.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/root/euro_ws/devel/include/astar_nav/astar_controller.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /root/euro_ws/devel/include/astar_nav/astar_controller.h: /opt/ros/noetic/share/nav_msgs/msg/Path.msg
-/root/euro_ws/devel/include/astar_nav/astar_controller.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /root/euro_ws/devel/include/astar_nav/astar_controller.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose2D.msg
+/root/euro_ws/devel/include/astar_nav/astar_controller.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/root/euro_ws/devel/include/astar_nav/astar_controller.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/root/euro_ws/devel/include/astar_nav/astar_controller.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/root/euro_ws/devel/include/astar_nav/astar_controller.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/root/euro_ws/devel/include/astar_nav/astar_controller.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
 /root/euro_ws/devel/include/astar_nav/astar_controller.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /root/euro_ws/devel/include/astar_nav/astar_controller.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/euro_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from astar_nav/astar_controller.srv"

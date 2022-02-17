@@ -6,6 +6,7 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("astar_navigation")
+subdirs("ekf_localization")
 subdirs("robot_navigation")
 subdirs("stage_simulation")
 subdirs("obstacle_detector")
